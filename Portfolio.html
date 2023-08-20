@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['HTML', 5],
+                ['PYTHON', 6],
+                ['C', 4],
+                ['C #', 2],
+                ['MYSQL', 7]
+            ]);
+
+            var options = {
+                title: 'ความสามารถ'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['นอน', 11],
+                ['กิน', 7],
+                ['ทำงาน', 4],
+                ['เล่นเกม', 15],
+            ]);
+
+            var options = {
+                title: 'การใช้ชีวิตในแต่ละวัน'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+
+            chart.draw(data, options);
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">ชนะภูมิ มลธุรัช</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">เกี่ยวกับ</a></li>
+                <li><a href="#experience">ประสบการณ์</a></li>
+                <li><a href="#contact">ติดต่อ</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">ชนะภูมิ มลธุรัช</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">เกี่ยวกับ</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">ประสบการณ์</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">ติดต่อ</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="image/1.jpg" alt=" profile picture" />
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">สวัสดี</p>
+            <h1 class="title">ชนะภูมิ มลธุรัช</h1>
+            <p class="section__text__p2">นักศีกษา</p>
+
+        </div>
+    </section>
+    <section id="about">
+        <h1 class="title">เกี่ยวกับ</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+
+    <div class="aaa">
+        <div id="piechart" style="width: 600px; height: 500px;"></div>
+        <div id="piechart1" style="width: 600px; height: 500px;"></div>
+    </div>
+
+</body>
+
+</html>
